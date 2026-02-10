@@ -1,5 +1,8 @@
-// Use /images so Next.js basePath (e.g. /Amanda in prod) is applied automatically
-const IMG = "/images";
+// Production: /Amanda/images for GitHub Pages. Dev: /images (no basePath).
+const IMG =
+  typeof process !== "undefined" && process.env?.NODE_ENV === "production"
+    ? "/Amanda/images"
+    : "/images";
 
 export const images = {
   logo: `${IMG}/amanda-stad-logo.png`,

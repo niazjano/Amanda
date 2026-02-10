@@ -17,7 +17,8 @@ echo "Copying out/ contents to root (including .nojekyll)..."
 for f in "$OUT_BACKUP"/* "$OUT_BACKUP"/.[!.]*; do
   [ -e "$f" ] && cp -r "$f" .
 done
-touch .nojekyll
+# Required: disable Jekyll so Amanda/_next (underscore) is served; without this, CSS/JS 404
+echo "" > .nojekyll
 rm -rf "$OUT_BACKUP"
 
 echo "Removing build artifacts from branch..."
@@ -25,8 +26,8 @@ rm -rf out .next node_modules .gitignore README.md next-env.d.ts next.config.js 
 
 echo "Staging and committing..."
 git add -A
-git add -f .nojekyll 2>/dev/null || true
-git commit -m "Deploy: GitHub Pages project site (assetPrefix /Amanda/)"
+git add -f .nojekyll
+git commit -m "Deploy: GitHub Pages (absolute assetPrefix, .nojekyll for _next)"
 git push origin gh-pages --force
 
 echo "Switching back to main..."
