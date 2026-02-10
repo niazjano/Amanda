@@ -1,7 +1,8 @@
-// Production: /Amanda/images for GitHub Pages. Dev: /images (no basePath).
+// Production: full URL so images load on GitHub Pages. Dev: /images.
+const SITE = "https://niazjano.github.io/Amanda";
 const IMG =
   typeof process !== "undefined" && process.env?.NODE_ENV === "production"
-    ? "/Amanda/images"
+    ? `${SITE}/images`
     : "/images";
 
 export const images = {
