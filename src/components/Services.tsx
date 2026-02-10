@@ -34,7 +34,7 @@ const services = [
     title: "Fönsterputs",
     description: "Professionell fönsterputs in- och utvändigt. Klara fönster som släpper in ljuset.",
     icon: "🪟",
-    image: images.windowCleaning,
+    image: images.fonsterputsCover,
     cta: "Läs mer",
   },
   {
