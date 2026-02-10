@@ -48,18 +48,18 @@ export function FAQ() {
               >
                 <button
                   type="button"
-                  className="w-full flex items-center justify-between gap-4 px-6 py-4 sm:py-5 text-left font-semibold text-brand-blue hover:bg-gray-50/80 transition-colors"
+                  className="w-full flex items-center justify-between gap-3 px-6 py-4 sm:py-5 text-left font-semibold text-brand-blue hover:bg-gray-50/80 transition-colors flex-nowrap"
                   onClick={() => setOpenId(isOpen ? null : faq.question)}
                   aria-expanded={isOpen}
                   aria-controls={`faq-answer-${faqs.indexOf(faq)}`}
                   id={`faq-question-${faqs.indexOf(faq)}`}
                 >
-                  {faq.question}
+                  <span className="min-w-0 flex-1">{faq.question}</span>
                   <span
-                    className={`flex-shrink-0 w-8 h-8 rounded-lg flex items-center justify-center text-brand-green transition-transform ${isOpen ? "rotate-180" : ""}`}
+                    className={`flex-shrink-0 inline-flex items-center justify-center w-8 h-8 rounded-lg bg-transparent text-brand-green transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}
                     aria-hidden
                   >
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-5 h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                     </svg>
                   </span>
@@ -70,7 +70,7 @@ export function FAQ() {
                   aria-labelledby={`faq-question-${faqs.indexOf(faq)}`}
                   className={`overflow-hidden transition-all duration-200 ${isOpen ? "max-h-96" : "max-h-0"}`}
                 >
-                  <div className="px-6 pb-4 sm:pb-5 pt-0 text-gray-600 text-sm sm:text-base leading-relaxed border-t border-gray-100">
+                  <div className={`px-6 pb-4 sm:pb-5 pt-0 text-gray-600 text-sm sm:text-base leading-relaxed ${isOpen ? "border-t border-gray-100" : ""}`}>
                     {faq.answer}
                   </div>
                 </div>
