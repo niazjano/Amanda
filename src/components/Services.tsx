@@ -7,6 +7,7 @@ import { images } from "@/lib/images";
 const services = [
   {
     id: "hemstadning",
+    slug: "hemstadning",
     title: "Hemstädning",
     description: "Regelbunden hemstädning som passar din vardag. Vi tar hand om ditt hem med omsorg och professionella produkter.",
     icon: "🏠",
@@ -15,6 +16,7 @@ const services = [
   },
   {
     id: "flyttstadning",
+    slug: "flyttstadning",
     title: "Flyttstädning",
     description: "Heltäckande städning inför eller efter flytt så att du kan fokusera på det viktiga.",
     icon: "📦",
@@ -23,6 +25,7 @@ const services = [
   },
   {
     id: "storstadning",
+    slug: "storstadning",
     title: "Storstädning",
     description: "Grundlig storstädning för ett skinande rent hem. Perfekt vid säsongskiften eller speciella tillfällen.",
     icon: "✨",
@@ -31,6 +34,7 @@ const services = [
   },
   {
     id: "fonsterputs",
+    slug: "fonsterputs",
     title: "Fönsterputs",
     description: "Professionell fönsterputs in- och utvändigt. Klara fönster som släpper in ljuset.",
     icon: "🪟",
@@ -39,6 +43,7 @@ const services = [
   },
   {
     id: "kontorsstadning",
+    slug: "kontorsstadning",
     title: "Kontorsstädning",
     description: "Städning av kontor och arbetsplatser. Flexibla tider som inte stör verksamheten.",
     icon: "🏢",
@@ -47,6 +52,7 @@ const services = [
   },
   {
     id: "trappstadning",
+    slug: "trappstadning",
     title: "Trappstädning / BRF",
     description: "Städning av trapphus, entréer och gemensamma utrymmen för bostadsrättsföreningar.",
     icon: "🪜",
@@ -93,7 +99,7 @@ export function Services() {
                   {service.description}
                 </p>
                 <Link
-                  href="#kontakt"
+                  href={`/tjanster/${service.slug}`}
                   className="inline-flex items-center gap-2 text-brand-green font-semibold hover:gap-3 transition-all"
                 >
                   {service.cta}
