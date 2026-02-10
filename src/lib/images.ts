@@ -1,7 +1,7 @@
 const IMG = "/images";
 
 export const images = {
-  logo: `${IMG}/Amanda__2_-55e109b3-adfc-4089-b4e8-9dfdc023b89e.png`,
+  logo: `${IMG}/amanda-stad-logo.png`,
   hero: `${IMG}/ChatGPT_Image_Feb_10__2026__01_53_53_PM-ba32c325-54af-4fc7-a02d-e05c0eb3084a.png`,
   kitchenCleaning: `${IMG}/ChatGPT_Image_Feb_10__2026__01_46_08_PM-6ca3a8dc-f303-4cd7-813e-163199efa466.png`,
   kitchenWiping: `${IMG}/ChatGPT_Image_Feb_10__2026__01_53_48_PM-46da940f-d8f0-4d1a-b694-3caef0b0bd89.png`,
