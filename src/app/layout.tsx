@@ -4,7 +4,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://amandastad.se"),
+  metadataBase: new URL("https://niazjano.github.io/Amanda"),
   title: "Amanda Städ Kristianstad – Professionell städning i Kristianstad",
   description:
     "Lokalt städbolag i Kristianstad. Hemstädning, flyttstädning, storstädning, fönsterputs. RUT-avdrag. Nöjd-kund-garanti. Boka enkelt och tryggt.",

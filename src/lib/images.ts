@@ -1,4 +1,5 @@
-const IMG = "/images";
+// Must match next.config.js basePath for GitHub Pages
+const IMG = "/Amanda/images";
 
 export const images = {
   logo: `${IMG}/amanda-stad-logo.png`,
